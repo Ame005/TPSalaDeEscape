@@ -18,7 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Habitacion(int sala, string clave){
         if(!Escape.ResolverSala(sala, clave)){
-            ViewBag.Error = "";
+            ViewBag.Error = "Vuelva a intentar";
         }
         return RedirectToAction("Comenzar");
        

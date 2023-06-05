@@ -1,15 +1,13 @@
 static class Escape {
     static string[] incognitasSalas;
-    static int estadoJuego;
+    static int estadoJuego = 1;
 
     private static void InicializarJuego(){
         incognitasSalas = new string[4];
-        incognitasSalas[0] = "";
+        incognitasSalas[0] = "bxt";
         incognitasSalas[1] = "";
         incognitasSalas[2] = "";
         incognitasSalas[3] = "";
-
-        estadoJuego = 1;
     }
     public static int GetEstadoJuego(){
         return estadoJuego;
