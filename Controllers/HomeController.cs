@@ -12,15 +12,22 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Comenzar(){
+    public IActionResult Comenzar(string mensaje){
+        if(mensaje!=""){
+            ViewBag.Error=mensaje;
+        }
         return View("Habitacion"+Escape.GetEstadoJuego());
     }
 
     public IActionResult Habitacion(int sala, string clave){
+        string mensaje= "";
         if(!Escape.ResolverSala(sala, clave)){
-            ViewBag.Error = "Vuelva a intentar";
+            mensaje = "Vuelve a intentar";
         }
-        return RedirectToAction("Comenzar");
-       
+        if(Escape.GetEstadoJuego()>4){
+            ViewBag.CantIntentosUsados=Escape.cantIntentosUsados;
+            return View("Victoria");
+        }   
+        return RedirectToAction("Comenzar", new { mensaje = mensaje });
     }
 }

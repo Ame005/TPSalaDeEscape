@@ -1,6 +1,7 @@
 static class Escape {
     static string[] incognitasSalas;
     static int estadoJuego = 1;
+    static public int cantIntentosUsados=0;
 
     private static void InicializarJuego(){
         incognitasSalas = new string[4];
@@ -17,10 +18,12 @@ static class Escape {
         if(incognitasSalas == null){
             InicializarJuego();
         }
-        
-        if(Incognita == incognitasSalas[Sala-1]){
-            estadoJuego++;
-            return true;
+        if (estadoJuego==Sala){
+            if(Incognita == incognitasSalas[Sala-1]){
+                estadoJuego++;
+                return true;
+            }
+            cantIntentosUsados++;
         }
         return false;
     }

@@ -1,2 +1,21 @@
-<h1>Habitacion del Tesoro</h1>
-<p>Intenta obtener el tesoro.</p>
+<h2><a href='@Url.Action("Index")' alt="Volver al inicio">Casa</a></h2>
+    <h3>@ViewBag.Error</h3>
+    <h1>Habitacion del Tesoro</h1>
+    <p>Intenta obtener el tesoro.</p>
+    <img src="~/imagenes/Habitacion2.png">
+    
+    <p>Desde el lunes hasta el viernes, soy la última en llegar. En sábado soy la primera. ¿Y en domingo? A descansar.</p>
+    <button id="R2-B1" onclick="GetClue('R2-P1')">Pista</button>
+    <p id='R2-P1' style="display:none">Fijate las negritas</p>
+
+    <p id='R2-PG' style="display:none">Pista anagrama</p><br>
+    <p id='R2-R' style="display:none">ANAGRAMA</p><br>
+
+    <form autocomplete="off" action='@Url.Action("Habitacion")'>
+        <input type="text" name="clave"/>
+        <input type="hidden" name="sala" value=1>
+        <input type="submit">
+    </form>
+
+    <button id="R2-BG" onclick="GetClue('R2-PG')">Pista</a>
+    <button id="R2-B" onclick="GetClue('R2-R')">Respuesta</a>

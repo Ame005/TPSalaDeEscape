@@ -1,2 +1,22 @@
 <h1>La Selva</h1>
 <p>Intenta encontrar el camino correcto. ¡Ten cuidado!, la selva es un lugar muy peligroso</p>
+<h2><a href='@Url.Action("Index")' alt="Volver al inicio">Casa</a></h2>
+    <h3>@ViewBag.Error</h3>
+    <h1>La Cueva</h1>
+    <img src="~/imagenes/Habitacion1.png">
+    
+    <p>IMAGEN</p>
+    <button id="R3-B1" onclick="GetClue('R3-P1')">Pista</button>
+    <p id='R3-P1' style="display:none">Los simbolos indican direcciones: Norte, Sur, Este y Oeste</p>
+
+    <p id='R3-PG' style="display:none">Utiliza la W, A, S y D para copiar las indicaciones</p><br>
+    <p id='R3-R' style="display:none">REPUESSTA</p><br>
+
+    <form autocomplete="off" action='@Url.Action("Habitacion")'>
+        <input type="text" name="clave"/>
+        <input type="hidden" name="sala" value=1>
+        <input type="submit">
+    </form>
+
+    <button id="R3-BG" onclick="GetClue('R3-PG')">Pista</button>
+    <button id="R3-B" onclick="GetClue('R3-R')">Respuesta</button>
