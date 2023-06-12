@@ -26,6 +26,7 @@ public class HomeController : Controller
         }
         if(Escape.GetEstadoJuego()>4){
             ViewBag.CantIntentosUsados=Escape.cantIntentosUsados;
+            
             return View("Victoria");
         }   
         return RedirectToAction("Comenzar", new { mensaje = mensaje });

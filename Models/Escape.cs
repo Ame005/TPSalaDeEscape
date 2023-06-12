@@ -6,15 +6,16 @@ static class Escape {
     private static void InicializarJuego(){
         incognitasSalas = new string[4];
         incognitasSalas[0] = "bxt";
-        incognitasSalas[1] = "";
-        incognitasSalas[2] = "";
-        incognitasSalas[3] = "";
+        incognitasSalas[1] = "Encontrado";
+        incognitasSalas[2] = "ddwdwaasawds";
+        incognitasSalas[3] = "ALGO";
     }
     public static int GetEstadoJuego(){
         return estadoJuego;
     }
 
     public static bool ResolverSala(int Sala, string Incognita){
+
         if(incognitasSalas == null){
             InicializarJuego();
         }
