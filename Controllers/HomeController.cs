@@ -12,6 +12,10 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Perdida(){
+        return View();
+    }
+
     public IActionResult Comenzar(string mensaje){
         if(mensaje!=""){
             ViewBag.Error=mensaje;

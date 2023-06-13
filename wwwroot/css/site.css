@@ -3,40 +3,62 @@ html {
   position: relative;
   min-height: 100%;
 }
+@font-face {
+  font-family: 'Mayan';
+  src: url('../tipografia/Mayan.ttf');
+}
 *{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Mayan';
 }
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
-
+#countdown{
+  font-size: 60px;
+}
 .room1{
   background-image: url('../imagenes/Habitacion1.png');
-  height: 1000px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment:scroll;
+  background-size: cover;
+  color:rgb(255, 250, 244);
 }
+.room1 img{
+  margin: none;
+}
+
 body {
+  justify-content: center;
   text-align: center;
-  margin: 0px; 
-  background-color: beige;
+  width: 100dvw;
+  height: 100vh;
 }
 
 header {
-  margin-bottom: 5%;
+  margin-bottom: 10%;
+  position: absolute;
+  width: 99%;
+}
+
+#mensajeError{
+
+  color:orangered;
+  font-size: 25px;
 }
 
 header img{
   float: left;
   width: 80px;
-  padding-left: 10%;
 }
+
 
 footer {
   position: fixed; 
   bottom: 0; 
   margin: 10px 0px 20px 0px;
-  margin-top: 5%;
 }
 
 h1 {
@@ -48,7 +70,7 @@ h1 {
 .textoPista{
   clear: left;
   width: 100%;
-  
+  margin-bottom: 5%;
 }
 
 p {
@@ -75,5 +97,10 @@ p {
 
 .pista button {
   text-align: center;
+}
+
+form {
+  text-align: center;
+  margin: 0 auto;
 }
 

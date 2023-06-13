@@ -9,14 +9,14 @@
     <body>
         <header style="position:fixed; top: 0; margin: 10px 0px 20px 0px;">
             <h2><a href='@Url.Action("Index")' alt="Volver al inicio"><img src="~/imagenes/casa.png"></a></h2>
-            <h3>@ViewBag.Error</h3>
+            <h3 id='mensajeError'>@ViewBag.Error</h3>
         </header>
         <div>
             @RenderBody()
         </div>
 
         <footer>
-                &copy; @DateTime.Now.Year - Taller de Programación - TPXX
+                
         </footer>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
