@@ -15,6 +15,9 @@ public class HomeController : Controller
     public IActionResult Perdida(){
         return View();
     }
+    public IActionResult Creditos(){
+        return View();
+    }
 
     public IActionResult Comenzar(string mensaje){
         if(mensaje!=""){

@@ -1,26 +1,48 @@
 
+<section class="Room4">
     <h1>A un paso de casa</h1>
     <p>Intenta encender el bote. ¡Apurate!, o te encontraran.</p>
     <img src="~/imagenes/Habitacion4.png">
-    
-    <p>Desde el lunes hasta el viernes, soy la última en llegar. En sábado soy la primera. ¿Y en domingo? A descansar.</p>
-    <button id="R4-B1" onclick="GetClue('R4-P1')"><img src="~/imagenes/bombilla.png"></button>
-    <p id='R4-P1' style="display:none">Una letra</p>
 
-    <p>Cual es la letra que, sin estar en todas partes, lo abarca todo</p>
-    <button id="R4-B2" onclick="GetClue('R4-P2')"><img src="~/imagenes/bombilla.png"></button>
-    <p id='R4-P2' style="display:none">Es fácil</p>
+    <audio id="soundbuttonGre" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+<audio id="soundbuttonRed" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+<audio id="soundbuttonYel" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+<audio id="soundbuttonBlu" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+<audio id="soundbuttonWrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3"></audio>
 
-    <p>Toda mi vida en un mes; mi caudal son cuatro cuartos y aunque me ves pobrecitando, ando siempre muy alto.</p>
-    <button id="R4-B3" onclick="GetClue('R4-P3')"><img src="~/imagenes/bombilla.png"></button>
-    <p id='R4-P3' style="display:none">Es una palabra, no una letra</p>
-
-    <p>Si me sumas conmigo mismo, mis dígitos me sumaran. La raíz cuadrada soy el límite sin igual. Divideme y en fracción eterna me podrás hallar. Enigma matemático, ¿puedes adivinar?</p>
-    <button id="R4-B4" onclick="GetClue('R4-P4')"><img src="~/imagenes/bombilla.png"></button>
-    <p id='R4-P4' style="display:none">Un numero del 1-10</p><br>
-
-    <p id='R4-PG' style="display:none">Junta, las letras de las primeras dos adivinanzas, la primer letra de la tercer y utiliza la respuesta de la cuarta para identificar el cifrado</p><br>
-    <p id='R4-R' style="display:none">bxt</p><br>
+<div class="gameContainer noSelect">
+  <div id="buttonGre" class="fourButton"></div>
+  <div id="buttonRed" class="fourButton"></div>
+  <div id="buttonYel" class="fourButton"></div>
+  <div id="buttonBlu" class="fourButton"></div>
+  <div id="center">
+    <div id="textTitle">Code</div>
+    <div id="countBox">
+      <div id="countDisplay">
+        <div id="displayText">
+          --
+        </div>
+      </div>
+      <div id="countText">Count</div>
+    </div>
+    <div id="startBox">
+      <div id="startButton"></div>
+      <div id="startText">Start</div>
+    </div>
+    <div id="strictBox">
+      <div id="strictButton""></div>
+      <div id="strictText">Strict</div>
+    </div>
+    <div id="powerBox">
+      <div id="onText">ON</div>
+      <div id="powerSwitch">
+        <div id="buttonOn"></div
+        ><div id="buttonOff"></div
+        ></div>
+      <div id="offText">OFF</div>
+    </div>
+  </div>
+</div>
 
     <form autocomplete="off" action='@Url.Action("Habitacion")'>
         <input type="text" name="clave"/>
@@ -28,5 +50,9 @@
         <input type="submit">
     </form>
 
+    <p id='R4-PG' style="display:none">Junta, las letras de las primeras dos adivinanzas, la primer letra de la tercer y utiliza la respuesta de la cuarta para identificar el cifrado</p><br>
+    <p id='R4-R' style="display:none">bxt</p><br>
     <button id="R4-BG" onclick="GetClue('R4-PG')">Pista</button>
     <button id="R4-B" onclick="GetClue('R4-R')">Respuesta</button>
+
+</section>

@@ -34,14 +34,11 @@
     </div>
    <p id='R1-PG' style="display:none">Junta, las letras de las primeras dos adivinanzas, la primer letra de la tercer y utiliza la respuesta de la cuarta para identificar el cifrado</p><br>
     <p id='R1-R' style="display:none">bxt</p><br>
-<footer>
     <form autocomplete="off" action='@Url.Action("Habitacion")'>
         <input type="text" name="clave"/>
         <input type="hidden" name="sala" value=@Escape.GetEstadoJuego()>
-        <input type="submit">
     </form>
     <button id="R1-BG" onclick="GetClue('R1-PG')">Pista</a>
     <button id="R1-B" onclick="GetClue('R1-R')">Respuesta</a>
-</footer>
     </div>
 </article>
