@@ -1,15 +1,14 @@
-
-    <h1>Habitacion del Tesoro</h1>
-    <p>Intenta obtener el tesoro.</p>
+<article>
+<div class="room2">
+    <div id="countdown"></div>
+<h1>Habitacion del Tesoro</h1>
     <img src="~/imagenes/Habitacion2.png">
 
 <div class="textoPista">
-    <div class="texto">
         <p>En una antigua ciu<b>d</b>ad maya, Nauhil, un joven valiente, se propuso encontrar un tesoro perdido oculto en la selva. Guiado por un quetzal y el sabio K'aak, superó desafíos y des<b>c</b>ubrió una estatua de jade exquisita. Al llevarla de vuelta a la ciudad, la prosperidad se desbordó en todas partes.</p>
         <p><b>E</b>l, Nahuil, sin embargo, comprendió que el verdadero tesoro no era la estatua, si<b>n</b>o el coraje y la conexión con su pueblo. Reconoció que el valor radicaba en la historia y el espíritu de su gente. La leyend<b>a</b> del tesoro perdido se convirtió en una fuente de inspiración para las futuras generaciones.</p>
         <p>La historia se <b>t</b>ransmitió de boca en boca, enseñando que la verdadera riqueza no se mide en monedas de <b>o</b>ro, sino en los lazos que unen a una comunidad y en el conocimiento ancest<b>r</b>al. Los mayas aprendieron que la valentía y el respeto por su tierra eran tesoros invaluables.</p>
         <p>La leyenda del tesoro perdido perduró en el tiempo, recorda<b>n</b>do a todos que los logros materiales son efímeros, pero la fuerza y la sabiduría de un pueblo son eternas. La ciudad maya floreció gracias al espíritu valiente de Nauhil y a su comprensión de que los tesoros más vali<b>o</b>sos son intangibles.</p>
-    </div>
     <div class="pista">
          <button id="R2-B1" onclick="GetClue('R2-P1')"><img src="~/imagenes/bombilla.png"></button>
         <p id='R2-P1' style="display:none">Fijate las negritas, manteniendo las mayusculas</p>
@@ -22,8 +21,8 @@
     <form autocomplete="off" action='@Url.Action("Habitacion")'>
         <input type="text" name="clave"/>
         <input type="hidden" name="sala" value=2>
-        <input type="submit">
     </form>
-
     <button id="R2-BG" onclick="GetClue('R2-PG')">Pista</a>
     <button id="R2-B" onclick="GetClue('R2-R')">Respuesta</a>
+</div>
+</article>
