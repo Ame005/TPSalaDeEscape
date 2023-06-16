@@ -2,7 +2,30 @@ html {
   font-size: 14px;
   min-height: 100%;
 }
-
+.nosotros{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.yo{
+  float:left;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 3%;
+  background-color: rgba(243, 238, 238, 0.8);
+  border:2px solid rgb(255, 255, 255);
+  width: 20%;
+  height: auto;
+  padding: 2.5%;
+}
+.yo h3{
+  margin-top: 3%;
+}
+.yo img{
+  margin:3%;
+}
 body {
   display: flex;
   flex-direction: column;
