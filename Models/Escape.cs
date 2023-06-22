@@ -7,7 +7,7 @@ static class Escape {
         incognitasSalas = new string[4];
         incognitasSalas[0] = "bxt";
         incognitasSalas[1] = "Encontrado";
-        incognitasSalas[2] = "ddwdwaasawds";
+        incognitasSalas[2] = "eenenoosones";
         incognitasSalas[3] = "ALGO";
     }
     public static int GetEstadoJuego(){
@@ -22,10 +22,14 @@ static class Escape {
         if (estadoJuego==Sala){
             if(Incognita == incognitasSalas[Sala-1]){
                 estadoJuego++;
+                System.Threading.Thread.Sleep(2000);
                 return true;
             }
-            cantIntentosUsados++;
         }
         return false;
+    }
+
+    public static void Inicializar(){
+        estadoJuego = 1;
     }
 }

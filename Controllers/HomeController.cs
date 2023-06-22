@@ -13,6 +13,14 @@ public class HomeController : Controller
     }
 
     public IActionResult Perdida(){
+        System.Threading.Thread.Sleep(2000);
+        Escape.Inicializar();
+        return View();
+    }
+
+    public IActionResult Victoria(){
+        System.Threading.Thread.Sleep(2000);
+        Escape.Inicializar();
         return View();
     }
     public IActionResult Creditos(){
