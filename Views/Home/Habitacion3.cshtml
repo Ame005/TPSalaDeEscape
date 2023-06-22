@@ -1,25 +1,27 @@
-<article>
-<div class="room3">
+<audio src="~/musica/musica-indiana.mp3" preload="metadata" autoplay loop></audio>
+<section class="room3">
     <div id="countdown"></div>
     <h1>La Selva</h1>
-    <p>Intenta encontrar el camino correcto. ¡Ten cuidado!, la selva es un lugar muy peligroso</p>  
+    <div class="consigna"><p>Intenta escapar del laberinto en el que te encuentras, los simbolos que estan debajo indican los puntos cardinales: n de norte, s de sur, e de este y o de oeste. Intenta averiguar que simbolo es cada punto, escribiendolos en secuencia para indicar las direcciones.</p></div> 
     <img class="img-room"src="~/imagenes/a.png">
 <div class="textoPista">
     <div class="pista">
-        <p id='R3-P1' style="display:none">Los simbolos indican direcciones: Norte, Sur, Este y Oeste</p>
+        <p id='R3-P1' style="display:none">El primer simbolo indica el este</p>
         <button id="R3-B1" onclick="GetClue('R3-P1')"><img src="~/imagenes/bombilla.png"></button>
     </div>
 </div>
 
-<p id='R3-PG' style="display:none">Utiliza la w, a, s y d para copiar las indicaciones</p><br>
-<p id='R3-R' style="display:none">ddwdwaasawds</p><br>
+<p id='R3-PG' style="display:none">El primer simbolo indica el este, el segundo simbolo diferente indica el norte, el tercero diferente indica el oeste y el cuarto diferente indica el sur</p><br>
+<p id='R3-R' style="display:none">eenenoosones</p><br>
 
 <form autocomplete="off" action='@Url.Action("Habitacion")'>
     <input type="text" name="clave"/>
     <input type="hidden" name="sala" value=3>
+    <input type="submit"/>
 </form>
 
 <button id="R3-BG" onclick="GetClue('R3-PG')">Pista</button>
 <button id="R3-B" onclick="GetClue('R3-R')">Respuesta</button>
-</div>
-</article>
+</section>
+
+<script src="~/js/site.js" asp-append-version="true"></script>

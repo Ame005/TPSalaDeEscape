@@ -9,6 +9,7 @@ html {
   justify-content: center;
   height: 100vh;
 }
+
 .yo{
   float:left;
   margin-left: 2%;
@@ -16,15 +17,23 @@ html {
   margin-top: 3%;
   background-color: rgba(243, 238, 238, 0.8);
   border:2px solid rgb(255, 255, 255);
-  width: 20%;
+  border-radius: 5%;
+  width: 30%;
   height: auto;
   padding: 2.5%;
 }
 .yo h3{
-  margin-top: 3%;
+  margin-top: 5%;
+  color: black;
+  font-size: 30px;
 }
 .yo img{
+  width: 400px;
+  height: 400px;
+  text-align: center;
   margin:3%;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 50%;
 }
 body {
   display: flex;
@@ -50,6 +59,14 @@ h1 {
   margin-top: 3%;
 }
 
+.segunda-texto {
+  background-color: white;
+}
+
+.segunda-texto p, b {
+  color: black;
+}
+
 .casa {
   position: fixed;
   top: 0;
@@ -69,30 +86,15 @@ h1 {
   top: 5px;
   right: 25px;
 }
-.room1 {
-  background-image: url('../imagenes/Habitacion1.png');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: scroll;
-  background-size: cover;
-  color: rgb(255, 250, 244);
-  text-decoration: antiquewhite;
-}
+
 .room1 img{
   top:0;
   right: 0;
   left: 0;
 }
 
-.room4 {
-  background-image: url('../imagenes/Habitacion4.png');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: scroll;
-  background-size: cover;
-  color: rgb(255, 250, 244);
-  text-decoration: antiquewhite;
-}
+
+
 
 a {
   text-decoration: none;
@@ -101,6 +103,19 @@ a {
 .Home {
   text-align: center;
 }
+
+.Home h3 {
+  text-shadow: 0 0 10px antiquewhite;
+  font-size: 25px;
+}
+
+.Home p {
+  margin-top: 1%;
+  margin-left: 35%;
+  width: 30%;
+  text-align: center;
+}
+
 
 h2 {
   margin-top: 1%;
@@ -123,9 +138,11 @@ body {
 }
 
 header {
-  margin-bottom: 10%;
-  position: absolute;
-  width: 99%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: none;
 }
 
 header img {
@@ -133,18 +150,21 @@ header img {
   width: 80px;
 }
 
+
 button,
-input[type="text"] {
+input[type="text"], input[type="submit"]{
   background-color: antiquewhite;
   color: black;
   border: none;
   margin: 4px 2px;
   padding: 4px 2px;
+  font-size: 15px;
 }
 
 #mensajeError {
   color: orangered;
   font-size: 25px;
+  text-align: center;
 }
 
 footer {
@@ -161,9 +181,25 @@ h1 {
 
 .textoPista {
   clear: left;
-  width: 100%;
-  margin-bottom: 5%;
-  align-items: center;
+  width: 40%;
+  margin-bottom: 1%;
+  margin-left: 30%;
+  text-align: center;
+}
+
+.consigna{
+  width: 50%;
+  margin-bottom: 3%;
+  margin-left: 25%;
+}
+
+.consigna p {
+  margin-top: 1%;
+  color: #339041;
+}
+
+.consigna b {
+  color: white;
 }
 
 p {
@@ -180,12 +216,17 @@ p {
 }
 
 .img-room {
-  width: 600px;
+  width: 400px;
+  height: 400px;
 }
 
 .pista {
   margin: 0 auto;
   padding: 1%;
+}
+
+.pista p {
+  color: green;
 }
 
 .pista button {
@@ -194,7 +235,7 @@ p {
 
 form {
   text-align: center;
-  margin: 0 auto;
+  margin-left: 3%;
 }
 
 .simon-container {
@@ -202,7 +243,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .simon {
@@ -220,19 +261,19 @@ form {
 }
 
 .green {
-  background-color: green;
+  background-color: #339041;
 }
 
 .red {
-  background-color: red;
+  background-color: #BB2716;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #B57F20;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #20A7B5;
 }
 
 .start-button {
@@ -250,4 +291,51 @@ form {
 
 .active {
   opacity: 0.5;
+}
+
+.Victoria {
+  background-image: url("../imagenes/victoria.gif");
+  height: 1000px;
+  padding-top: 100px;
+}
+
+.Victoria h1 {
+  margin-top: 10%;
+  font-size: 80px;
+}
+
+.Victoria p {
+  font-size: 30px;
+  margin-top: 2%;
+}
+
+.Perdida h1{
+  font-size: 100px;
+  position: relative;
+  margin-top: 15%;
+  animation-name: animacion;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.Perdida p {
+  font-size: 30px;
+  margin-top: 2%;
+}
+
+@keyframes animacion{
+  0% {color:red;}
+  50% {color:orange;}
+  100% {color: yellow;}
+}
+
+.tutorial {
+  width: 30%;
+  text-align: center;
+  margin-left: 35%;
+}
+
+.tutorial p{
+  margin-top: 10px;
 }

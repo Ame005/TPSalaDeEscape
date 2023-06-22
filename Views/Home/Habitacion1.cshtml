@@ -1,26 +1,27 @@
-<article>
-<div class="room1">
+<audio src="~/musica/musica-indiana.mp3" preload="metadata" autoplay loop></audio>
+<section class="room1">
     <div id="countdown"></div>
-<h1>La Cueva</h1>
+    <h1>La Cueva</h1>
+    <div class="consigna"><p>Resuelve las adivinanzas y, manteniendo el orden intenta formar una palabra con las respuestas de cada una. La cuarta consigna sin embargo, tiene otro tipo de respuesta, ¿sabes lo que es el cifrado cesar?</br><a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank"><b>toca aquí para averiguarlo</b></a> (¡Cuidado! El tiempo seguirá corriendo)</p></div>
     <div class="textoPista">
             <p>Desde el lunes hasta el viernes, soy la última en llegar. En sábado soy la primera. ¿Y en domingo? A descansar.</p>
         <div class="pista">
             <button id="R1-B1" onclick="GetClue('R1-P1')"><img src="~/imagenes/bombilla.png"></button>
-            <p id='R1-P1' style="display:none">Una letra</p>
+            <p id='R1-P1' style="display:none">La letra 's'</p>
         </div>
     </div>
     <div class="textoPista">
         <p>Cual es la letra que, sin estar en todas partes, lo abarca todo</p>
         <div class="pista">
             <button id="R1-B2" onclick="GetClue('R1-P2')"><img src="~/imagenes/bombilla.png"></button>
-            <p id='R1-P2' style="display:none">Es fácil</p>
+            <p id='R1-P2' style="display:none">La letra 'o'</p>
         </div>
     </div>
     <div class="textoPista">
-        <p>Toda mi vida en un mes; mi caudal son cuatro cuartos y aunque me ves pobrecitando, ando siempre muy alto.</p>
+        <p>Resulta que en Melilla hay tres, en Madrid, ninguna, en Castilla dos y en Galicia, una</p>
         <div class="pista">
             <button id="R1-B3" onclick="GetClue('R1-P3')"><img src="~/imagenes/bombilla.png"></button>
-            <p id='R1-P3' style="display:none">Es una palabra, no una letra</p>
+            <p id='R1-P3' style="display:none">La letra 'l'</p>
         </div>
     </div>
     <div class="textoPista">
@@ -30,13 +31,14 @@
             <p id='R1-P4' style="display:none">Un numero del 1-10</p><br>
         </div>
     </div>
-   <p id='R1-PG' style="display:none">Junta, las letras de las primeras dos adivinanzas, la primer letra de la tercer y utiliza la respuesta de la cuarta para identificar el cifrado</p><br>
+    <p id='R1-PG' style="display:none">Junta, las letras de las primeras tres adivinanzas y utiliza la respuesta de la cuarta para identificar el cifrado cesar</p><br>
     <p id='R1-R' style="display:none">bxt</p><br>
     <form autocomplete="off" action='@Url.Action("Habitacion")'>
         <input type="text" name="clave"/>
         <input type="hidden" name="sala" value=@Escape.GetEstadoJuego()>
+        <input type="submit"/>
     </form>
     <button id="R1-BG" onclick="GetClue('R1-PG')">Pista</a>
     <button id="R1-B" onclick="GetClue('R1-R')">Respuesta</a>
-    </div>
-</article>
+</section>
+<script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,8 +1,8 @@
-
+<audio src="~/musica/musica-indiana.mp3" preload="metadata" autoplay loop></audio>
 <section class="Room4">
+    <div id="countdown"></div>
     <h1>A un paso de casa</h1>
-    <p>Intenta encender el bote. ¡Apurate!, o te encontraran.</p>
-    <img src="~/imagenes/Habitacion4.png">
+    <div class="consigna"><p>Para lograr escapar de la isla con el tesoro debes replicar la secuencia del Simon y así encender el bote que te sacará de allí. ¡Apurate!</p></div>
 
 <div class="simon-container">
     <div class="simon">
@@ -15,14 +15,5 @@
     <h2 class="message"></h2>
   </div>
 
-    <form autocomplete="off" action='@Url.Action("Habitacion")'>
-        <input type="text" name="clave"/>
-        <input type="hidden" name="sala" value=4>
-    </form>
-
-    <p id='R4-PG' style="display:none">Junta, las letras de las primeras dos adivinanzas, la primer letra de la tercer y utiliza la respuesta de la cuarta para identificar el cifrado</p><br>
-    <p id='R4-R' style="display:none">bxt</p><br>
-    <button id="R4-BG" onclick="GetClue('R4-PG')">Pista</button>
-    <button id="R4-B" onclick="GetClue('R4-R')">Respuesta</button>
-
+<script src="~/js/simon.js" asp-append-version="true"></script>
 </section>
