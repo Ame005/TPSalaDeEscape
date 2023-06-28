@@ -31,8 +31,8 @@
             <p id='R1-P4' style="display:none">Un numero del 1-10</p><br>
         </div>
     </div>
-    <p id='R1-PG' style="display:none">Junta, las letras de las primeras tres adivinanzas y utiliza la respuesta de la cuarta para identificar el cifrado cesar</p><br>
-    <p id='R1-R' style="display:none">bxt</p><br>
+    <p class="PG" id='R1-PG' style="display:none">Junta, las letras de las primeras tres adivinanzas y utiliza la respuesta de la cuarta para identificar el cifrado cesar</p><br>
+    <p class="R" id='R1-R' style="display:none">bxt</p><br>
     <form autocomplete="off" action='@Url.Action("Habitacion")'>
         <input type="text" name="clave"/>
         <input type="hidden" name="sala" value=@Escape.GetEstadoJuego()>

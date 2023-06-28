@@ -1,14 +1,13 @@
 static class Escape {
     static string[] incognitasSalas;
-    static int estadoJuego = 1;
+    static int estadoJuego = 0;
     static public int cantIntentosUsados=0;
 
     private static void InicializarJuego(){
-        incognitasSalas = new string[4];
+        incognitasSalas = new string[3];
         incognitasSalas[0] = "bxt";
-        incognitasSalas[1] = "Encontrado";
+        incognitasSalas[1] = "encontrado";
         incognitasSalas[2] = "eenenoosones";
-        incognitasSalas[3] = "ALGO";
     }
     public static int GetEstadoJuego(){
         return estadoJuego;
@@ -20,9 +19,8 @@ static class Escape {
             InicializarJuego();
         }
         if (estadoJuego==Sala){
-            if(Incognita == incognitasSalas[Sala-1]){
+            if(Incognita.ToLower() == incognitasSalas[Sala-1]){
                 estadoJuego++;
-                System.Threading.Thread.Sleep(2000);
                 return true;
             }
         }

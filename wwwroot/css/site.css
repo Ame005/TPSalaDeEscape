@@ -179,6 +179,16 @@ h1 {
   text-align: center;
 }
 
+.PG {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.R{
+  color: white;
+  font-weight: bold;
+}
+
 .textoPista {
   clear: left;
   width: 40%;
@@ -338,4 +348,9 @@ form {
 
 .tutorial p{
   margin-top: 10px;
+}
+
+.tutorial h1 {
+  margin-top: 70px;
+  margin-bottom: 20px;
 }

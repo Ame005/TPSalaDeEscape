@@ -12,3 +12,7 @@
     <a href='@Url.Action("Comenzar")'><h2>Comenzar juego</h2></a>
     <a href='@Url.Action("Creditos")'><h2>Créditos</h2></a>
 </div>
+
+<input type="hidden" id="h" name="sala" value=@Escape.GetEstadoJuego()>
+
+<script src="~/js/site.js" asp-append-version="true"></script>

@@ -13,13 +13,11 @@ public class HomeController : Controller
     }
 
     public IActionResult Perdida(){
-        System.Threading.Thread.Sleep(2000);
         Escape.Inicializar();
         return View();
     }
 
     public IActionResult Victoria(){
-        System.Threading.Thread.Sleep(2000);
         Escape.Inicializar();
         return View();
     }
@@ -30,6 +28,9 @@ public class HomeController : Controller
     public IActionResult Comenzar(string mensaje){
         if(mensaje!=""){
             ViewBag.Error=mensaje;
+        }
+        if(Escape.GetEstadoJuego()==0||Escape.GetEstadoJuego()>4){
+            Escape.Inicializar();
         }
         return View("Habitacion"+Escape.GetEstadoJuego());
     }
